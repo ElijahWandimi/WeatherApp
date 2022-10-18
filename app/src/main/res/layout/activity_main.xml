@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnGetCityId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_get_id"
+        app:layout_constraintEnd_toStartOf="@+id/btnGetWeatherByCityId"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <Button
+        android:id="@+id/btnGetWeatherByCityId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_use_id"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnGetCityId"
+        app:layout_constraintEnd_toStartOf="@+id/btnGetWeatherByCityName"
+        tools:layout_editor_absoluteX="130dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <Button
+        android:id="@+id/btnGetWeatherByCityName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_use_name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnGetWeatherByCityId"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteX="265dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <EditText
+        android:id="@+id/txtCityDetailInput"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33sp"
+        android:inputType="text"
+        android:hint="@string/in_hint"
+        android:labelFor="@+id/txtCityDetailInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGetCityId" />
+
+    <ListView
+        android:id="@+id/lst_vw_cities"
+        android:layout_width="0sp"
+        android:layout_height="0sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCityDetailInput" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

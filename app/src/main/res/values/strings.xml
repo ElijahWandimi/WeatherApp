@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WeatherApiApp</string>
+    <string name="btn_use_name">Use City Name</string>
+    <string name="btn_use_id">Use City Id</string>
+    <string name="btn_get_id">Get City Id</string>
+    <string name="in_hint">City Name</string>
+</resources>
